@@ -1,7 +1,7 @@
 let request = new XMLHttpRequest();
 let emojiData;
 let button = document.querySelector(".js-button");
-let image = document.querySelector(".js-image");
+let image = document.querySelector(".js-emoji-image");
 let shortCode = document.querySelector(".js-shortcode");
 
 let getRandomProperty = (obj = {}) => {

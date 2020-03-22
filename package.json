@@ -1,8 +1,8 @@
 {
-  "name": "emoji-roulette",
+  "name": "emoji-shortcode-roulette",
   "version": "1.0.0",
-  "description": "",
-  "main": "emoji-script.js",
+  "description": "A random generator for an emoji and its shortcode, using GitHub emoji.",
+  "main": "index.js",
   "dependencies": {
     "clipboard": "^2.0.6",
     "connect": "^3.7.0",
@@ -13,7 +13,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["emoji", "random", "shortcode"],
+  "author": "claire_codes",
   "license": "ISC"
 }

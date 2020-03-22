@@ -8,6 +8,8 @@
     <meta name="author" content="claire_codes" />
 
     <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
   </head>
 
   <body>
@@ -17,8 +19,9 @@
         class="js-image"
         src="https://github.githubassets.com/images/icons/emoji/unicode/1f3f7.png?v8"
       />
-      <h2 class="shortcode">:<span class="js-shortcode">Code</span>:</h2>
-      <button class="js-button">Get new emoji</button>
+      <h2 class="shortcode" id="shortcode">:<span class="js-shortcode">Code</span>:</h2>
+      <button type="button" class="js-copy" data-clipboard-target="#shortcode">Copy to clipboard</button>
+      <button type="button" class="js-button">Get new emoji</button>
     </main>
 
     <script src="emoji-script.js"></script>

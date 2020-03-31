@@ -27,7 +27,8 @@
   </head>
 
   <body>
-    <main class="main-wrapper">
+    <main>
+        <div class="main-wrapper">
       <h1>Emoji Shortcode Roulette</h1>
       <img
         class="emoji-image js-emoji-image"
@@ -39,7 +40,12 @@
       <div class="shortcode" id="shortcode">:<span class="js-shortcode">Code</span>:</div>
       <button type="button" class="button js-button">Get new emoji</button>
       <button type="button" class="button js-copy" data-clipboard-target="#shortcode">Copy to clipboard</button>
+      <p><dl>
+          <dt>What is this?</dt>
+          <dd>Generate a randomly selected emoji shortcode and its GitHub image each time the button is pressed. Emoji Shortcodes are codes used on various websites to speed up emoji insertion using a keyboard (<a href="https://emojipedia.org/shortcodes/">Emojipedia</a>). The emoji data is from the GitHub emoji api <a href="https://api.github.com/emojis">https://api.github.com/emojis</a>, although the codes will mostly work in other apps and websites.</dd>
+      </dl></p>
       <p>Made by <a href="https://clairecodes.com">clairecodes</a></p>
+      </div>
     </main>
 
     <script src="index.js"></script>

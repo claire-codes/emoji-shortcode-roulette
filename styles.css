@@ -1,9 +1,15 @@
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .main-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  height: 100vh;
+  max-width: 500px;
+  min-height: 100vh;
   flex-direction: column;
 }
 
@@ -39,7 +45,7 @@ button {
   font-size: 20px;
   background-color: #111;
   color: #fafafa;
-  padding: 7px;
+  padding: 7px 15px;
   border-radius: 3px;
   box-shadow: #a5a3a3 3px 3px 0px 0px;
   border: none;
@@ -50,4 +56,14 @@ button:hover {
   transform: translate(2px, 2px);
   box-shadow: #a5a3a3 4px 4px 4px 0px;
   cursor: pointer;
+}
+
+dt {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+dd {
+    margin: 0;
+    line-height: 22px;
 }

@@ -28,19 +28,21 @@
 
   <body>
     <main>
-        <div class="main-wrapper">
-      <h1>Emoji Shortcode Roulette</h1>
-      <img
-        class="emoji-image js-emoji-image"
-        src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-        alt="Emoji icon"
-        height="64"
-        width="64"
-      />
-      <div class="shortcode" id="shortcode">:<span class="js-shortcode"></span>:</div>
-      <button type="button" class="button js-button">Get new emoji</button>
-      <button type="button" class="button js-copy" data-clipboard-target="#shortcode">Copy to clipboard</button>
-      <dl>
+      <div class="main-wrapper">
+        <div class="centered-content">
+          <h1 class="page-title">Emoji Shortcode Roulette</h1>
+          <img
+            class="emoji-image js-emoji-image"
+            src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+            alt="Emoji icon"
+            height="64"
+            width="64"
+          />
+          <div class="shortcode" id="shortcode">:<span class="js-shortcode"></span>:</div>
+          <button type="button" class="button js-button">Get new emoji</button>
+          <button type="button" class="button js-copy" data-clipboard-target="#shortcode">Copy to clipboard</button>
+        </div>
+      <dl class="faqs">
         <dt>What is this?</dt>
         <dd>
           Generate a randomly selected emoji shortcode and its GitHub image
@@ -52,7 +54,9 @@
           although the codes will mostly work in other apps and websites.
         </dd>
       </dl>
-      <p>Made by <a href="https://clairecodes.com">clairecodes</a></p>
+      <footer>
+        <p>Made by <a href="https://clairecodes.com">clairecodes</a></p>
+      </footer>
       </div>
     </main>
 

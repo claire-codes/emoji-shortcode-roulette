@@ -10,13 +10,15 @@ let getRandomProperty = (obj = {}) => {
   return { code: randomKey, imageSrc: obj[randomKey] };
 };
 
-let updateEmojiOnScreen = (emojiData = {imageSrc: '', code: ''}) => {
-    image.src = emojiData["imageSrc"];
+let updateEmojiOnScreen = (emojiData = { imageSrc: "", code: "" }) => {
+  image.src = emojiData["imageSrc"];
+  image.onload = () => {
     shortCode.innerHTML = emojiData["code"];
-}
+  }
+};
 
 request.open("GET", "github-emoji.json");
-request.onload = function() {
+request.onload = function () {
   emojiData = JSON.parse(this.response);
   updateEmojiOnScreen(getRandomProperty(emojiData));
 };
@@ -29,17 +31,17 @@ button.addEventListener("click", () => {
 
 // Clipboard.js stuff
 
-var clipboard = new ClipboardJS('.js-copy');
+var clipboard = new ClipboardJS(".js-copy");
 
-clipboard.on('success', function(e) {
-    // console.info('Action:', e.action);
-    // console.info('Text:', e.text);
-    // console.info('Trigger:', e.trigger);
+clipboard.on("success", function (e) {
+  // console.info('Action:', e.action);
+  // console.info('Text:', e.text);
+  // console.info('Trigger:', e.trigger);
 
-    e.clearSelection();
+  e.clearSelection();
 });
 
-clipboard.on('error', function(e) {
-    // console.error('Action:', e.action);
-    // console.error('Trigger:', e.trigger);
+clipboard.on("error", function (e) {
+  // console.error('Action:', e.action);
+  // console.error('Trigger:', e.trigger);
 });

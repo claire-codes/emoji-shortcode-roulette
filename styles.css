@@ -42,6 +42,40 @@ main {
   margin: 3em 0 2em;
 }
 
+.tooltip {
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  position: relative;
+}
+.tooltip::after {
+  background-color: rgba(51, 51, 51, 0.9);
+  border-radius: 0.3rem;
+  color: #fff;
+  content: attr(data-tooltip-success);
+  font-size: 1rem;
+  font-size: 85%;
+  font-weight: normal;
+  line-height: 1.15rem;
+  opacity: 0;
+  padding: 0.25rem 0.5rem;
+  position: absolute;
+  text-align: center;
+  text-transform: none;
+  transition: all 0.2s;
+  visibility: hidden;
+  white-space: nowrap;
+  z-index: 1;
+  top: 140%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.show-tooltip::after {
+  visibility: visible;
+    opacity: 1;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
@@ -72,7 +106,6 @@ button {
 
 button:hover {
   background-color: #666;
-  transform: translate(2px, 2px);
   box-shadow: #a5a3a3 4px 4px 4px 0px;
   cursor: pointer;
 }

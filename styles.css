@@ -1,3 +1,7 @@
+:root {
+  --border-radius-px: 3px;
+}
+
 main {
   display: flex;
   align-items: center;
@@ -49,10 +53,8 @@ main {
   position: relative;
 }
 .tooltip::after {
-  background-color: rgba(51, 51, 51, 0.9);
-  border-radius: 0.3rem;
+  border-radius: var(--border-radius-px);
   color: #fff;
-  content: attr(data-tooltip-success);
   font-size: 1rem;
   font-size: 85%;
   font-weight: normal;
@@ -69,6 +71,16 @@ main {
   top: 140%;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.success::after {
+  background-color: green;
+  content: attr(data-tooltip-success);
+}
+
+.failure::after {
+  background-color: red;
+  content: attr(data-tooltip-failure);
 }
 
 .show-tooltip::after {
@@ -99,7 +111,7 @@ button {
   background-color: #111;
   color: #fafafa;
   padding: 7px 15px;
-  border-radius: 3px;
+  border-radius: var(--border-radius-px);
   box-shadow: #a5a3a3 3px 3px 0px 0px;
   border: none;
 }

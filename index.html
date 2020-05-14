@@ -40,7 +40,15 @@
           />
           <div class="shortcode" id="shortcode">:<span class="js-shortcode"></span>:</div>
           <button type="button" class="button js-button">Get new emoji</button>
-          <button type="button" class="button tooltip js-copy" data-clipboard-target="#shortcode" data-tooltip-success="Copied text to clipboard">Copy to clipboard</button>
+          <button
+            type="button"
+            class="button tooltip js-copy"
+            data-clipboard-target="#shortcode"
+            data-tooltip-success="Copied text to clipboard"
+            data-tooltip-failure="Couldn't copy text"
+          >
+            Copy to clipboard
+          </button>
         </div>
       <dl class="faqs">
         <dt>What is this?</dt>

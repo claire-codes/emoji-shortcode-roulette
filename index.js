@@ -16,7 +16,7 @@ let updateEmojiOnScreen = (emojiData = { imageSrc: "", code: "" }) => {
   image.src = emojiData["imageSrc"];
   image.onload = () => {
     shortCode.innerHTML = emojiData["code"];
-  }
+  };
 };
 
 request.open("GET", "github-emoji.json");
@@ -37,13 +37,22 @@ var clipboard = new ClipboardJS(".js-copy");
 
 clipboard.on("success", function (e) {
   window.clearTimeout(timeoutId);
-  clipboardButton.classList.add('show-tooltip');
-  timeoutId = setTimeout(() => clipboardButton.classList.remove('show-tooltip'), 4000);
+  clipboardButton.classList.add("show-tooltip", "success");
+  timeoutId = setTimeout(
+    () => clipboardButton.classList.remove("show-tooltip", "success"),
+    4000
+  );
 
   e.clearSelection();
 });
 
 clipboard.on("error", function (e) {
-  // console.error('Action:', e.action);
-  // console.error('Trigger:', e.trigger);
+  window.clearTimeout(timeoutId);
+  clipboardButton.classList.add("show-tooltip", "failure");
+  timeoutId = setTimeout(
+    () => clipboardButton.classList.remove("show-tooltip", "failure"),
+    4000
+  );
+
+  e.clearSelection();
 });

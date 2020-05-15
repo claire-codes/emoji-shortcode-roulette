@@ -72,7 +72,9 @@ main {
   left: 50%;
   transform: translateX(-50%);
 }
-.tooltip::before {
+
+.success::before,
+.failure::before {
   border-style: solid;
   border-width: 5px;
   content: "";
@@ -86,21 +88,21 @@ main {
 }
 
 .success::after {
-  background-color: #43A047;
+  background-color: #43a047;
   content: attr(data-tooltip-success);
 }
 
 .success::before {
-  border-color: transparent transparent #43A047 transparent;
+  border-color: transparent transparent #43a047 transparent;
 }
 
 .failure::after {
-  background-color: #E53935;
+  background-color: #e53935;
   content: attr(data-tooltip-failure);
 }
 
 .failure::before {
-  border-color: transparent transparent #E53935 transparent;
+  border-color: transparent transparent #e53935 transparent;
 }
 
 .show-tooltip::after,

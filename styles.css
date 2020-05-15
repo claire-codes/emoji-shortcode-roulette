@@ -1,5 +1,7 @@
 :root {
   --border-radius-px: 3px;
+  --button-text-color: #fafafa;
+  --box-shadow-color: #a5a3a3;
 }
 
 main {
@@ -47,30 +49,25 @@ main {
 }
 
 .tooltip {
-  cursor: pointer;
-  display: inline-block;
-  line-height: 1;
   position: relative;
 }
 
 .tooltip::after {
   border-radius: var(--border-radius-px);
-  color: #fff;
-  font-size: 1rem;
-  font-size: 85%;
-  line-height: 1.15rem;
+  color: var(--button-text-color);
+  font-size: 20px;
   opacity: 0;
-  padding: 0.25rem 0.5rem;
+  padding: 7px 15px;
   position: absolute;
   text-align: center;
-  text-transform: none;
   transition: opacity 0.2s;
   visibility: hidden;
   white-space: nowrap;
   z-index: 1;
-  top: 140%;
+  top: 138%;
   left: 50%;
   transform: translateX(-50%);
+  box-shadow: var(--box-shadow-color) 3px 3px 3px 0px;
 }
 
 .success::before,
@@ -84,7 +81,6 @@ main {
   visibility: hidden;
   top: 112%;
   left: 50%;
-  margin-left: -0.3rem;
 }
 
 .success::after {
@@ -132,16 +128,16 @@ button {
 button {
   font-size: 20px;
   background-color: #111;
-  color: #fafafa;
+  color: var(--button-text-color);
   padding: 7px 15px;
   border-radius: var(--border-radius-px);
-  box-shadow: #a5a3a3 3px 3px 0px 0px;
+  box-shadow: var(--box-shadow-color) 3px 3px 0px 0px;
   border: none;
 }
 
 button:hover {
   background-color: #666;
-  box-shadow: #a5a3a3 4px 4px 4px 0px;
+  box-shadow: var(--box-shadow-color) 4px 4px 4px 0px;
   cursor: pointer;
 }
 

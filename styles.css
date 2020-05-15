@@ -10,103 +10,6 @@ main {
   justify-content: center;
 }
 
-.main-wrapper {
-  max-width: 500px;
-  min-height: 100vh;
-  padding: 1em;
-}
-
-.centered-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: 1em;
-}
-
-@media screen and (min-width: 40em) {
-  .centered-content {
-    margin-top: 3em;
-  }
-}
-
-.page-title {
-  text-align: center;
-}
-
-.shortcode {
-  font-family: monospace;
-  font-size: 28px;
-}
-
-.emoji-image {
-  height: 64px;
-  width: 64px;
-}
-
-.faqs {
-  margin: 3em 0 2em;
-}
-
-.tooltip {
-  position: relative;
-}
-
-.tooltip::after {
-  border-radius: var(--border-radius-px);
-  color: var(--button-text-color);
-  font-size: 20px;
-  opacity: 0;
-  padding: 7px 15px;
-  position: absolute;
-  text-align: center;
-  transition: opacity 0.2s;
-  visibility: hidden;
-  white-space: nowrap;
-  z-index: 1;
-  top: 138%;
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: var(--box-shadow-color) 3px 3px 3px 0px;
-}
-
-.success::before,
-.failure::before {
-  border-style: solid;
-  border-width: 5px;
-  content: "";
-  opacity: 0;
-  position: absolute;
-  transition: opacity 0.2s;
-  visibility: hidden;
-  top: 112%;
-  left: 50%;
-}
-
-.success::after {
-  background-color: #43a047;
-  content: attr(data-tooltip-success);
-}
-
-.success::before {
-  border-color: transparent transparent #43a047 transparent;
-}
-
-.failure::after {
-  background-color: #e53935;
-  content: attr(data-tooltip-failure);
-}
-
-.failure::before {
-  border-color: transparent transparent #e53935 transparent;
-}
-
-.show-tooltip::after,
-.show-tooltip::before {
-  visibility: visible;
-  opacity: 1;
-}
-
 body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
@@ -153,4 +56,104 @@ dd {
 
 footer {
   text-align: center;
+}
+
+.main-wrapper {
+  max-width: 500px;
+  min-height: 100vh;
+  padding: 1em;
+}
+
+.centered-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1em;
+}
+
+@media screen and (min-width: 40em) {
+  .centered-content {
+    margin-top: 3em;
+  }
+}
+
+.page-title {
+  text-align: center;
+}
+
+.shortcode {
+  font-family: monospace;
+  font-size: 28px;
+}
+
+.emoji-image {
+  height: 64px;
+  width: 64px;
+}
+
+.faqs {
+  margin: 3em 0 2em;
+}
+
+.tooltip {
+  position: relative;
+}
+
+/* Tooltip box */
+.tooltip::after {
+  border-radius: var(--border-radius-px);
+  color: var(--button-text-color);
+  font-size: 20px;
+  opacity: 0;
+  padding: 7px 15px;
+  position: absolute;
+  text-align: center;
+  transition: opacity 0.2s;
+  visibility: hidden;
+  white-space: nowrap;
+  z-index: 1;
+  top: 138%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: var(--box-shadow-color) 3px 3px 3px 0px;
+}
+
+/* Tooltip arrow */
+.success::before,
+.failure::before {
+  border-style: solid;
+  border-width: 5px;
+  content: "";
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.2s;
+  visibility: hidden;
+  top: 112%;
+  left: 50%;
+}
+
+/* Content specific to success and failure tooltips */
+.success::after {
+  background-color: #43a047;
+  content: attr(data-tooltip-success);
+}
+
+.success::before {
+  border-color: transparent transparent #43a047 transparent;
+}
+
+.failure::after {
+  background-color: #e53935;
+  content: attr(data-tooltip-failure);
+}
+
+.failure::before {
+  border-color: transparent transparent #e53935 transparent;
+}
+
+.show-tooltip::after,
+.show-tooltip::before {
+  visibility: visible;
+  opacity: 1;
 }

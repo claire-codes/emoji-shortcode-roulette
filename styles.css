@@ -38,10 +38,13 @@ button {
   border: none;
 }
 
-button:hover {
-  background-color: #666;
-  box-shadow: var(--box-shadow-color) 4px 4px 4px 0px;
-  cursor: pointer;
+/* Wrap in media query so that it isn't used on touch devices when buttons are clicked */
+@media (hover) {
+  button:hover {
+    background-color: #666;
+    box-shadow: var(--box-shadow-color) 4px 4px 4px 0px;
+    cursor: pointer;
+  }
 }
 
 dt {
